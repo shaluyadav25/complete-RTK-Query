@@ -1,0 +1,57 @@
+:root {
+  :root { font-family: Georgia, 'Times New Roman', serif; color: #182523; background: #f3efe5; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-width: 320px; background: radial-gradient(circle at 15% 0%, #fff8e8 0, transparent 35%), #f3efe5; }
+  body::-webkit-scrollbar-button { display: none; }
+  html { scrollbar-width: thin; }
+  html::-webkit-scrollbar-button { display: none; }
+  #root { min-height: 100svh; }
+  .app-shell { width: min(100% - 40px, 980px); margin: 0 auto; padding: 72px 0; }
+  .page-header { max-width: 620px; margin-bottom: 42px; }
+  .eyebrow, .summary-label { color: #bf5539; font: 700 12px/1.2 Verdana, sans-serif; letter-spacing: 1.8px; text-transform: uppercase; }
+  h1 { margin: 12px 0; color: #183d36; font-size: clamp(42px, 7vw, 76px); font-weight: 400; line-height: .95; }
+  .intro { color: #64716b; font: 16px/1.6 Verdana, sans-serif; }
+  .content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 28px; align-items: start; }
+  .profile-form, .directory-summary { border: 1px solid #d8d1c2; background: rgba(255, 252, 244, .82); box-shadow: 8px 8px 0 #ded6c6; }
+  .profile-form { padding: 30px; }
+  .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .field { display: grid; gap: 7px; color: #34453e; font: 700 12px Verdana, sans-serif; }
+  .field-wide { grid-column: 1 / -1; }
+  input { width: 100%; border: 1px solid #c8c0b2; border-radius: 0; padding: 13px 14px; color: #183d36; background: #fffdf8; font: 16px Georgia, serif; outline: none; }
+  input:focus { border-color: #bf5539; box-shadow: 0 0 0 3px rgba(191, 85, 57, .15); }
+  input[aria-invalid='true'] { border-color: #bf5539; }
+  .image-preview-wrap { position: relative; width: 110px; margin-top: 12px; }
+  .image-preview { display: block; width: 110px; height: 110px; object-fit: cover; border: 2px solid #183d36; border-radius: 6px; }
+  .image-remove-button { position: absolute; top: 4px; right: 4px; width: 24px; height: 24px; margin: 0; padding: 0; border-radius: 50%; color: #fffdf8; background: #bf5539; font: 20px/20px Georgia, serif; }
+  small { color: #bf5539; font: 12px Verdana, sans-serif; }
+  button { width: 100%; margin-top: 28px; border: 0; padding: 15px 20px; color: #fffdf8; background: #183d36; cursor: pointer; font: 700 13px Verdana, sans-serif; }
+  button:hover { background: #bf5539; }
+  button:disabled { cursor: wait; opacity: .65; }
+  .directory-summary { padding: 25px; }
+  .directory-summary strong { display: block; margin: 16px 0 6px; color: #183d36; font-size: 58px; font-weight: 400; line-height: 1; }
+  .directory-summary p { color: #64716b; font: 12px/1.5 Verdana, sans-serif; }
+  .users-section { margin-top: 38px; padding: 28px; border: 1px solid #d8d1c2; background: rgba(255, 252, 244, .82); box-shadow: 8px 8px 0 #ded6c6; }
+  .users-heading h2 { margin: 8px 0 20px; color: #183d36; font: 30px Georgia, serif; }
+  .user-list { display: grid; gap: 10px; }
+  .user-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 16px; border: 1px solid #ded6c6; background: #fffdf8; }
+  .user-photo { width: 52px; height: 52px; flex: 0 0 52px; object-fit: cover; border-radius: 50%; }
+  .user-row > div:first-child { display: grid; gap: 5px; }
+  .user-row strong { color: #183d36; font: 18px Georgia, serif; }
+  .user-row small { color: #64716b; }
+  .row-actions { display: flex; gap: 8px; }
+  .row-actions button { width: auto; margin: 0; padding: 9px 12px; font-size: 11px; }
+  .row-actions button:last-child { background: #bf5539; }
+  .empty-state { color: #64716b; font: 13px Verdana, sans-serif; }
+  .cancel-button { color: #183d36; background: transparent; border: 1px solid #183d36; }
+  @media (max-width: 700px) { .app-shell { width: min(100% - 28px, 600px); padding: 42px 0; } .content-grid { grid-template-columns: 1fr; } .directory-summary { box-shadow: 5px 5px 0 #ded6c6; } .users-section { box-shadow: 5px 5px 0 #ded6c6; } }
+  @media (max-width: 470px) { .profile-form { padding: 20px; } .form-grid { grid-template-columns: 1fr; } .field-wide { grid-column: auto; } .users-section { padding: 20px; } .user-row { align-items: flex-start; flex-direction: column; } .row-actions { width: 100%; } .row-actions button { flex: 1; } }
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
